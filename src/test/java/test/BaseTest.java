@@ -5,13 +5,19 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-import pages.LoginPage;
+import pages.*;
+
 import java.time.Duration;
 import java.util.HashMap;
 
 public class BaseTest {
-    WebDriver driver;
+   WebDriver driver;
     public LoginPage loginPage;
+    //private final ThreadLocal<LoginPage>  loginPage = new ThreadLocal<>();
+    public ProductsPage productsPage;
+    public CartPage cartPage;
+    public CheckpoutPage checkpoutPage;
+    public CheckoutOverviewPage checkoutOverviewPage;
 
     @BeforeMethod(alwaysRun=true)
     public void setUp() {
@@ -24,10 +30,17 @@ public class BaseTest {
         options.addArguments("--disable-notifications");
         options.addArguments("--disable-popup-blocking");
         options.addArguments("--disable-infobars");
-        driver = new ChromeDriver(options);
+       driver = new ChromeDriver(options);
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-        loginPage = new LoginPage(driver);
+       loginPage = new LoginPage(driver);
+        //DriverManager.setWebDriver(new ChromeDriver(options));
+       // DriverManager.getDriver().manage().window().maximize();
+       // loginPage.set(new LoginPage(DriverManager.getDriver()));
+        productsPage = new ProductsPage(driver);
+        cartPage = new CartPage(driver);
+        checkpoutPage = new CheckpoutPage(driver);
+        checkoutOverviewPage = new CheckoutOverviewPage(driver);
     }
 
     @AfterMethod(alwaysRun=true)
@@ -35,5 +48,11 @@ public class BaseTest {
         if (driver != null) {
             driver.quit();
         }
+      //  DriverManager.quit();
+        //loginPage.remove();
     }
+
+    //public ThreadLocal<LoginPage> getLoginPage() {
+      //  return loginPage;
+    //}
 }

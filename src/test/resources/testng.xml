@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="2" name="saucedemo" parallel="classes">
+    <test name="thread1">
+        <classes>
+            <class name="test.LocatorsTest"/>
+        </classes>
+    </test>
+    <test name="thread2">
+        <groups>
+            <run>
+                <include name="checkLoginWithEmptyPassword"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="test.LoginTest"/>
+        </classes>
+    </test>
+</suite>
