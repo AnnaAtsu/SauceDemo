@@ -9,7 +9,9 @@ public class CheckoutOverviewTest extends BaseTest{
     private String productName = "Sauce Labs Bolt T-Shirt";
     private double productPrice = 15.99;
 
-    @Test
+    @Test(description = "Проверка отображения товара в корзину",
+            testName = "Проверка товара в корзине и его данных",
+            groups = "smoke")
     public void testCheckoutOverviewWithOneProduct() {
         SoftAssert softAssert = new SoftAssert();
         loginPage.open();

@@ -6,7 +6,9 @@ import org.testng.asserts.SoftAssert;
 
 public class CheckOutTest extends BaseTest{
 
-    @Test
+    @Test(description = "Проверка чекаута с пустым именем",
+            testName = "Негативные креды",
+            groups = "regress")
     public void checkCheckoutWithEmptyUsername() {
         SoftAssert softAssert = new SoftAssert();
         loginPage.open();
@@ -21,7 +23,9 @@ public class CheckOutTest extends BaseTest{
         softAssert.assertAll();
     }
 
-    @Test
+    @Test(description = "Проверка чекаута с пустым паролем",
+            testName = "Негативные креды",
+            groups = "regress")
     public void checkCheckoutWithEmptyPassword() {
         SoftAssert softAssert = new SoftAssert();
         loginPage.open();
@@ -36,7 +40,9 @@ public class CheckOutTest extends BaseTest{
         softAssert.assertAll();
     }
 
-    @Test
+    @Test(description = "Проверка чекаута с пустым почтовым кодом",
+            testName = "Негативные креды",
+            groups = "regress")
     public void checkCheckoutWithEmptyPostal() {
         SoftAssert softAssert = new SoftAssert();
         loginPage.open();
@@ -51,7 +57,9 @@ public class CheckOutTest extends BaseTest{
         softAssert.assertAll();
     }
 
-    @Test
+    @Test(description = "Проверка чекаута с валидными данными",
+            testName = "Позитивные креды",
+            groups = "smoke")
     public void checkCheckoutWithPositiveCreds() {
         SoftAssert softAssert = new SoftAssert();
         loginPage.open();

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="2" name="saucedemo" parallel="tests">
+    <test name="Chrome">
+        <classes>
+            <class name="test.LoginTest">
+                <methods>
+                    <include name="checkLoginWithPositiveCreds"/>
+                </methods>
+            </class>
+            <parameter name="browser" value="chrome"/>
+        </classes>
+    </test>
+
+    <test name="Safari">
+        <classes>
+            <class name="test.AddToCartTest"/>
+            <class name="test.CompletePurchaseTest"></class>
+            <parameter name="browser" value="firefox"/>
+        </classes>
+    </test>
+</suite>

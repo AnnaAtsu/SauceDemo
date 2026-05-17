@@ -4,16 +4,14 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
-import static org.testng.Assert.assertEquals;
-import static org.testng.Assert.assertNotEquals;
-
 
 public class LoginTest extends BaseTest {
 
     @Test(
             priority = 3,
             description = "Проверка логина с позитивными кредами",
-            testName = "Позитивные креды"
+            testName = "Позитивные креды",
+          groups = {"smoke", "login"}
           //  invocationCount = 2,
             //threadPoolSize = 2
     )
@@ -21,10 +19,16 @@ public class LoginTest extends BaseTest {
         SoftAssert softAssert = new SoftAssert();
         loginPage.open();
         loginPage.login("standard_user", "secret_sauce");
-        assertNotEquals(loginPage.getErrorMessage(), "Epic sadface: Password is required", "Very bad");
+        String actualTitle = "Products";
+        String expectedTitle = driver.getTitle();
+        softAssert.assertNotEquals(actualTitle, expectedTitle, "Very bad");
+        softAssert.assertAll();
     }
 
-    @Test
+    @Test(description = "Проверка логина c пустым именем",
+            testName = "Негативные креды",
+            groups = {"regress", "login"}
+    )
     public void checkLoginWithEmptyUsername() {
         SoftAssert softAssert = new SoftAssert();
         loginPage.open();
@@ -33,7 +37,10 @@ public class LoginTest extends BaseTest {
                 "Epic sadface: Username is required", "Very bad");
     }
 
-    @Test
+    @Test(description = "Проверка логина c пустым паролем",
+            testName = "Негативные креды",
+            groups = {"regress", "login"}
+    )
     public void checkLoginWithEmptyPassword() {
         SoftAssert softAssert = new SoftAssert();
         loginPage.open();
@@ -42,7 +49,10 @@ public class LoginTest extends BaseTest {
                 "Epic sadface: Password is required", "Very bad");
     }
 
-    @Test
+    @Test(description = "Проверка логина c негативными кредами",
+            testName = "Негативные креды",
+            groups = {"regress", "login"}
+    )
     public void checkLoginWithNegativeCreds() {
         SoftAssert softAssert = new SoftAssert();
         loginPage.open();
@@ -60,7 +70,10 @@ public class LoginTest extends BaseTest {
         };
     }
 
-    @Test(dataProvider = "Параметризированный тест для негативного логина")
+    @Test(dataProvider = "Параметризированный тест для негативного логина",
+            description = "Проверка логина c негативными кредами с дата провайдером",
+            testName = "Негативные креды",
+            groups = {"regress", "login"})
     public void checkLoginWithEmptyPassworWithloginData(String user, String password, String error) {
         SoftAssert softAssert = new SoftAssert();
         loginPage.open();

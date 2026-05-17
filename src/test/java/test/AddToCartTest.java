@@ -13,7 +13,9 @@ public class AddToCartTest extends BaseTest {
     String expectedNameItem = "Sauce Labs Backpack";
     String expectedPriceItem = "$29.99";
 
-    @Test
+    @Test(description = "Проверка добавления товара в корзину",
+            testName = "Проверка товара в корзине",
+            groups = "smoke")
     void checkCartItem() {
         SoftAssert softAssert = new SoftAssert();
         driver.get("https://www.saucedemo.com/");
@@ -39,7 +41,10 @@ public class AddToCartTest extends BaseTest {
         };
     }
 
-    @Test(dataProvider = "cartProducts")
+    @Test(dataProvider = "cartProducts",
+            description = "Проверка добавления товара в корзину с дата провайдером",
+            testName = "Проверка товара в корзине + дата провайдер",
+            groups = "smoke")
     public void checkCart(String productName) {
         SoftAssert softAssert = new SoftAssert();
         loginPage.open();

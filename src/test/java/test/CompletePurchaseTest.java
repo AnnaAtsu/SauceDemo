@@ -5,7 +5,9 @@ import org.testng.asserts.SoftAssert;
 
 public class CompletePurchaseTest extends BaseTest{
 
-    @Test
+    @Test(description = "End to end тест для совершения покупки",
+            testName = "Критический путь",
+            groups = "smoke")
     public void buyProductTest() {
 
         SoftAssert softAssert = new SoftAssert();

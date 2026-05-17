@@ -11,7 +11,9 @@ public class ProductsTest extends BaseTest{
 
     String productName = "Sauce Labs Bolt T-Shirt";
 
-    @Test
+    @Test(description = "Проверка наличия товаров на странице",
+            testName = "Позитивный тест",
+            groups = "smoke")
     public void checkAllItemsOnPage() {
         SoftAssert softAssert = new SoftAssert();
         loginPage.open();
@@ -23,7 +25,9 @@ public class ProductsTest extends BaseTest{
         softAssert.assertAll();
     }
 
-    @Test
+    @Test(description = "Проверка количества добавления кнопок Add to Cart",
+            testName = "Позитивный тест",
+            groups = "regress")
     public void checkAddButtonCount() {
         SoftAssert softAssert = new SoftAssert();
         loginPage.open();
@@ -35,7 +39,9 @@ public class ProductsTest extends BaseTest{
         softAssert.assertAll();
     }
 
-    @Test
+    @Test(description = "Проверка Add to Cart меняется на Remove",
+            testName = "Позитивный тест",
+            groups = "smoke")
     public void checkAllAddButtonsChangeToRemove() {
         SoftAssert softAssert = new SoftAssert();
         loginPage.open();
@@ -51,7 +57,9 @@ public class ProductsTest extends BaseTest{
         softAssert.assertAll();
     }
 
-    @Test
+    @Test(description = "Проверка Add to Cart меняется на Remove, а потом на Add to Cart",
+            testName = "Позитивный тест",
+            groups = "regress")
     public void checkAddButtonChangeToRemove() {
         SoftAssert softAssert = new SoftAssert();
         loginPage.open();
