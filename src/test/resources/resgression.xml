@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="2" name="saucedemo" parallel="classes">
+    <listeners>
+    <listener class-name="test.TestListener">
+    </listener>
+    </listeners>
+    <test name="thread1">
+        <classes>
+            <class name="test.CheckoutOverviewTest"/>
+            <class name="test.ProductsTest"/>
+        </classes>
+    </test>
+
+    <test name="thread2">
+        <classes>
+            <class name="test.AddToCartTest"/>
+            <class name="test.CheckOutTest"/>
+        </classes>
+    </test>
+</suite>

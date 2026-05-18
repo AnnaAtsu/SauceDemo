@@ -15,7 +15,7 @@ public class LoginPage extends BasePage{
     private final By ERROR_MESSAGE = By.cssSelector("[data-test='error']");
 
     public void open() {
-        driver.get( "https://www.saucedemo.com/");
+        driver.get( BASE_URL);
     }
 
     public void login(String user, String pass) {
@@ -26,7 +26,5 @@ public class LoginPage extends BasePage{
 
     public String getErrorMessage() {
         return driver.findElement(ERROR_MESSAGE).getText();
-    }
-    public void isPageOpened() {
     }
 }
