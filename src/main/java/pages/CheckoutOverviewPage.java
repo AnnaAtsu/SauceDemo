@@ -1,12 +1,14 @@
 package pages;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+
 import java.util.ArrayList;
 import java.util.List;
 
-public class CheckoutOverviewPage extends BasePage{
+public class CheckoutOverviewPage extends BasePage {
 
     private final By CART_ITEMS = By.className("cart_item");
     private final By PRODUCT_NAME = By.className("inventory_item_name");
@@ -17,6 +19,7 @@ public class CheckoutOverviewPage extends BasePage{
         super(driver);
     }
 
+    @Step("Получить список товаров на странице")
     public List<String> getProductNames() {
         List<WebElement> cartItems = driver.findElements(CART_ITEMS);
         List<String> productNames = new ArrayList<>();
@@ -29,6 +32,7 @@ public class CheckoutOverviewPage extends BasePage{
         return productNames;
     }
 
+    @Step("Получить список цен товаров")
     public List<Double> getProductPrices() {
         List<WebElement> cartItems = driver.findElements(CART_ITEMS);
         List<Double> productPrices = new ArrayList<>();
@@ -41,16 +45,17 @@ public class CheckoutOverviewPage extends BasePage{
         return productPrices;
     }
 
+    @Step("Получить список всех товаров")
     public double getItemTotal() {
         String itemTotalText = driver.findElement(ITEM_TOTAL).getText();
         String numberPart = itemTotalText.replace("Item total: $", "");
         return Double.parseDouble(numberPart);
     }
 
-    public int getProductsCount() {
-        return driver.findElements(CART_ITEMS).size();
-    }
-
+    //public int getProductsCount() {
+    //   return driver.findElements(CART_ITEMS).size();
+    //}
+    @Step("Посчитать  цену: {prices} товары в корзине")
     public double calculateExpectedItemTotal(List<Double> prices) {
         double sum = 0;
         for (double price : prices) {
