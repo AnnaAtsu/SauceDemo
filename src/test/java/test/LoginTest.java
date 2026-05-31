@@ -31,7 +31,6 @@ public class LoginTest extends BaseTest {
         SoftAssert softAssert = new SoftAssert();
         loginPage.open();
         loginPage.login("standard_user", "2secret_sauce");
-        // Принудительное падение
         Assert.fail("Тест упал намеренно для проверки Allure");
         String actualTitle = "Products";
         String expectedTitle = driver.getTitle();
@@ -51,7 +50,7 @@ public class LoginTest extends BaseTest {
     public void checkLoginWithEmptyUsername() {
         SoftAssert softAssert = new SoftAssert();
         loginPage.open();
-        loginPage.login("", "standard_user");
+        loginPage.loginWithNegtiveCreds("", "standard_user");
         softAssert.assertEquals(loginPage.getErrorMessage(),
                 "Epic sadface: Username is required", "Very bad");
     }
@@ -68,7 +67,7 @@ public class LoginTest extends BaseTest {
     public void checkLoginWithEmptyPassword() {
         SoftAssert softAssert = new SoftAssert();
         loginPage.open();
-        loginPage.login("standard_user", "");
+        loginPage.loginWithNegtiveCreds("standard_user", "");
         softAssert.assertEquals(loginPage.getErrorMessage(),
                 "Epic sadface: Password is required", "Very bad");
     }
@@ -85,7 +84,7 @@ public class LoginTest extends BaseTest {
     public void checkLoginWithNegativeCreds() {
         SoftAssert softAssert = new SoftAssert();
         loginPage.open();
-        loginPage.login("test", "test");
+        loginPage.loginWithNegtiveCreds("test", "test");
         softAssert.assertEquals(loginPage.getErrorMessage(),
                 "Epic sadface: Username and password do not match any user in this service", "Very bad");
     }

@@ -3,9 +3,12 @@ package pages;
 import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class CheckpoutPage extends BasePage {
 
+    WebDriverWait wait;
     private final By CHECKOUT_BUTTON = By.id("checkout");
     private final By USERNAME_CHECKOUT_FIELD = By.id("first-name");
     private final By PASSWORD_CHECKOUT_FIELD = By.id("last-name");
@@ -19,6 +22,12 @@ public class CheckpoutPage extends BasePage {
 
     public CheckpoutPage(WebDriver driver) {
         super(driver);
+    }
+
+    @Override
+    public BasePage isPageOpened() {
+        wait.until(ExpectedConditions.visibilityOfElementLocated(CHECKOUT_BUTTON));
+        return this;
     }
 
     @Step("Нажать на кнопку checkout")
