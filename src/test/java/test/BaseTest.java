@@ -3,6 +3,8 @@ package test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.safari.SafariDriver;
@@ -42,9 +44,9 @@ public class BaseTest {
             driver.manage().window().maximize();
             driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         } else if (browser.equalsIgnoreCase("firefox")) {
-            FirefoxOptions options = new FirefoxOptions();
+            EdgeOptions options = new EdgeOptions();
             options.addArguments("--headless");
-            driver = new FirefoxDriver(options);
+            driver = new EdgeDriver(options);
         }
 
         loginPage = new LoginPage(driver);
