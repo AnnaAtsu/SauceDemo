@@ -19,6 +19,9 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
+    env:
+    USER: ${{secrets.SD_USER}}
+    PASS: ${{secrets.SD_PASSWORD}}
 
     steps:
     - uses: actions/checkout@v4
@@ -29,4 +32,4 @@ jobs:
         distribution: 'temurin'
         cache: maven
     - name: Run autotests
-      run: mvn clean test
+      run: mvn clean test -Duser=$USER -Dpassword$PASS

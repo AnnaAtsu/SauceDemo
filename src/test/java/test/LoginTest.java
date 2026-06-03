@@ -32,7 +32,7 @@ public class LoginTest extends BaseTest {
     public void checkLoginWithEmptyUsername() {
         SoftAssert softAssert = new SoftAssert();
         loginPage.open();
-        loginPage.login("", "standard_user");
+        loginPage.login("", password);
         softAssert.assertEquals(loginPage.getErrorMessage(),
                 "Epic sadface: Username is required", "Very bad");
     }
