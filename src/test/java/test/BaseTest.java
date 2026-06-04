@@ -13,6 +13,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import pages.*;
+import test.PropertyReader;
 
 import java.time.Duration;
 import java.util.HashMap;
@@ -25,8 +26,8 @@ public class BaseTest {
     public CartPage cartPage;
     public CheckpoutPage checkpoutPage;
     public CheckoutOverviewPage checkoutOverviewPage;
-    String user = System.getProperty("user");
-    String password =System.getProperty("password");
+    String user = System.getProperty("user", PropertyReader.getProperty("user"));
+    String password =System.getProperty("password", PropertyReader.getProperty("password"));
 
     @Parameters({"browser"})
     @BeforeMethod(alwaysRun=true, description = "открытие браузера")
