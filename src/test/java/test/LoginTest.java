@@ -51,6 +51,7 @@ public class LoginTest extends BaseTest {
         SoftAssert softAssert = new SoftAssert();
         loginPage.open();
         loginPage.loginWithNegtiveCreds("", "standard_user");
+        loginPage.login("", password);
         softAssert.assertEquals(loginPage.getErrorMessage(),
                 "Epic sadface: Username is required", "Very bad");
     }

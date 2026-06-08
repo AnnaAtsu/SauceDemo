@@ -5,10 +5,19 @@ import listeners.TestListener;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.ITestContext;
 import org.testng.annotations.*;
+import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.safari.SafariDriver;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Optional;
+import org.testng.annotations.Parameters;
 import pages.*;
+import test.PropertyReader;
 
 import java.time.Duration;
 import java.util.HashMap;
@@ -24,6 +33,8 @@ public class BaseTest {
     public CartPage cartPage;
     public CheckpoutPage checkpoutPage;
     public CheckoutOverviewPage checkoutOverviewPage;
+    String user = System.getProperty("user", PropertyReader.getProperty("user"));
+    String password =System.getProperty("password", PropertyReader.getProperty("password"));
 
     @Parameters({"browser"})
     @BeforeMethod(alwaysRun = true, description = "открытие браузера")
@@ -38,11 +49,14 @@ public class BaseTest {
             options.addArguments("--disable-notifications");
             options.addArguments("--disable-popup-blocking");
             options.addArguments("--disable-infobars");
+            options.addArguments("--headless"); //режим без граф.части браузера
             driver = new ChromeDriver(options);
             driver.manage().window().maximize();
             driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         } else if (browser.equalsIgnoreCase("firefox")) {
-            driver = new FirefoxDriver();
+            EdgeOptions options = new EdgeOptions();
+            options.addArguments("--headless");
+            driver = new EdgeDriver(options);
         }
         iTestContext.setAttribute("driver", driver);
         loginPage = new LoginPage(driver);
