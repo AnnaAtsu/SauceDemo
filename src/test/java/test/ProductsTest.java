@@ -1,19 +1,26 @@
 package test;
 
+import io.qameta.allure.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
+
 import java.util.List;
 
 
-public class ProductsTest extends BaseTest{
+public class ProductsTest extends BaseTest {
 
     String productName = "Sauce Labs Bolt T-Shirt";
 
     @Test(description = "Проверка наличия товаров на странице",
             testName = "Позитивный тест",
             groups = "smoke")
+    @Owner("Anna")
+    @Epic("Sauce Demo 4")
+    @Feature("Products Page")
+    @Story("check All Items On Page")
+    @Severity(SeverityLevel.BLOCKER)
     public void checkAllItemsOnPage() {
         SoftAssert softAssert = new SoftAssert();
         loginPage.open();
@@ -28,6 +35,11 @@ public class ProductsTest extends BaseTest{
     @Test(description = "Проверка количества добавления кнопок Add to Cart",
             testName = "Позитивный тест",
             groups = "regress")
+    @Owner("Anna")
+    @Epic("Sauce Demo 4")
+    @Feature("Products Page")
+    @Story("check add buttons On Page")
+    @Severity(SeverityLevel.BLOCKER)
     public void checkAddButtonCount() {
         SoftAssert softAssert = new SoftAssert();
         loginPage.open();
@@ -42,6 +54,11 @@ public class ProductsTest extends BaseTest{
     @Test(description = "Проверка Add to Cart меняется на Remove",
             testName = "Позитивный тест",
             groups = "smoke")
+    @Owner("Anna")
+    @Epic("Sauce Demo 4")
+    @Feature("Products Page")
+    @Story("check remove buttons On Page")
+    @Severity(SeverityLevel.BLOCKER)
     public void checkAllAddButtonsChangeToRemove() {
         SoftAssert softAssert = new SoftAssert();
         loginPage.open();
@@ -60,6 +77,11 @@ public class ProductsTest extends BaseTest{
     @Test(description = "Проверка Add to Cart меняется на Remove, а потом на Add to Cart",
             testName = "Позитивный тест",
             groups = "regress")
+    @Owner("Anna")
+    @Epic("Sauce Demo 4")
+    @Feature("Products Page")
+    @Story("check change add buttons on Page")
+    @Severity(SeverityLevel.BLOCKER)
     public void checkAddButtonChangeToRemove() {
         SoftAssert softAssert = new SoftAssert();
         loginPage.open();

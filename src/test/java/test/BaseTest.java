@@ -1,11 +1,15 @@
 package test;
 
+import io.qameta.allure.testng.AllureTestNg;
+import listeners.TestListener;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.ITestContext;
+import org.testng.annotations.*;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.safari.SafariDriver;
 import org.testng.annotations.AfterMethod;
@@ -18,8 +22,11 @@ import test.PropertyReader;
 import java.time.Duration;
 import java.util.HashMap;
 
+//TestListener.class
+
+@Listeners({AllureTestNg.class, TestListener.class})
 public class BaseTest {
-   WebDriver driver;
+    WebDriver driver;
     public LoginPage loginPage;
     //private final ThreadLocal<LoginPage>  loginPage = new ThreadLocal<>();
     public ProductsPage productsPage;
@@ -30,8 +37,8 @@ public class BaseTest {
     String password =System.getProperty("password", PropertyReader.getProperty("password"));
 
     @Parameters({"browser"})
-    @BeforeMethod(alwaysRun=true, description = "открытие браузера")
-    public void setUp(@Optional("chrome") String browser) {
+    @BeforeMethod(alwaysRun = true, description = "открытие браузера")
+    public void setUp(@Optional("chrome") String browser, ITestContext iTestContext) {
         if (browser.equalsIgnoreCase("chrome")) {
             ChromeOptions options = new ChromeOptions();
             HashMap<String, Object> chromePrefs = new HashMap<>();
@@ -51,26 +58,26 @@ public class BaseTest {
             options.addArguments("--headless");
             driver = new EdgeDriver(options);
         }
-
+        iTestContext.setAttribute("driver", driver);
         loginPage = new LoginPage(driver);
         //DriverManager.setWebDriver(new ChromeDriver(options));
-       // DriverManager.getDriver().manage().window().maximize();
-       // loginPage.set(new LoginPage(DriverManager.getDriver()));
+        // DriverManager.getDriver().manage().window().maximize();
+        // loginPage.set(new LoginPage(DriverManager.getDriver()));
         productsPage = new ProductsPage(driver);
         cartPage = new CartPage(driver);
         checkpoutPage = new CheckpoutPage(driver);
         checkoutOverviewPage = new CheckoutOverviewPage(driver);
     }
 
-    @AfterMethod(alwaysRun=true, description = "закрытие браузера")
+    @AfterMethod(alwaysRun = true, description = "закрытие браузера")
     public void teatDown() {
         if (driver != null) {
             driver.quit();
         }
-      //  DriverManager.quit();
+        //  DriverManager.quit();
         //loginPage.remove();
     }
     //public ThreadLocal<LoginPage> getLoginPage() {
-      //  return loginPage;
+    //  return loginPage;
     //}
 }

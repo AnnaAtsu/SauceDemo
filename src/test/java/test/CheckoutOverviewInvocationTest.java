@@ -1,28 +1,20 @@
 package test;
 
-import io.qameta.allure.*;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
 import java.util.List;
 
-public class CheckoutOverviewTest extends BaseTest {
-
+public class CheckoutOverviewInvocationTest extends BaseTest{
     private String productName = "Sauce Labs Bolt T-Shirt";
     private double productPrice = 15.99;
 
-    @Test(description = "Проверка отображения товара в корзину",
-            testName = "Проверка товара в корзине и его данных",
-            groups = "smoke")
-    @Owner("Anna")
-    @Epic("Sauce Demo 1")
-    @Feature("Checkout Page")
-    @Story("CheckoutOverviewWithOneProduct")
-    @Severity(SeverityLevel.BLOCKER)
+    @Test
     public void testCheckoutOverviewWithOneProduct() {
         SoftAssert softAssert = new SoftAssert();
-        loginPage.open();
-        loginPage.login("standard_user", "secret_sauce");
+        productsPage = loginPage
+                .open()
+                .login("standard_user", "secret_sauce");
         productsPage.addToCart(productName);
         productsPage.clickCart();
         checkpoutPage.clickShoppingCartIcon();

@@ -1,5 +1,6 @@
 package test;
 
+import io.qameta.allure.*;
 import org.openqa.selenium.By;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -16,6 +17,15 @@ public class AddToCartTest extends BaseTest {
     @Test(description = "Проверка добавления товара в корзину",
             testName = "Проверка товара в корзине",
             groups = "smoke")
+    @Owner("Anna")
+    @Epic("Sauce Demo 2")
+    @Feature("Cart Page")
+    @Story("Add to cart")
+    @Description("Проверка добавления в корзину")
+    @Severity(SeverityLevel.BLOCKER)
+    @Link(name = "analysis", url = "https://www.saucedemo.com/")
+    @TmsLink("SD-103")
+    @Issue("BUG 02")
     void checkCartItem() {
         SoftAssert softAssert = new SoftAssert();
         driver.get("https://www.saucedemo.com/");
@@ -45,10 +55,15 @@ public class AddToCartTest extends BaseTest {
             description = "Проверка добавления товара в корзину с дата провайдером",
             testName = "Проверка товара в корзине + дата провайдер",
             groups = "smoke")
+    @Owner("Anna")
+    @Epic("Sauce Demo 2")
+    @Feature("Cart Page")
+    @Story("Check products in cart")
+    @Severity(SeverityLevel.CRITICAL)
     public void checkCart(String productName) {
         SoftAssert softAssert = new SoftAssert();
         loginPage.open();
-        loginPage.login("standard_user","secret_sauce");
+        loginPage.login("standard_user", "secret_sauce");
         List<String> expectedProducts = new ArrayList<>();
         String[] productsToAdd = {"Sauce Labs Backpack", "Sauce Labs Bolt T-Shirt", "Sauce Labs Fleece Jacket"};
 

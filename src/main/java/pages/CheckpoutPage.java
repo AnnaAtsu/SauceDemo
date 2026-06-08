@@ -1,10 +1,14 @@
 package pages;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class CheckpoutPage extends BasePage {
 
+    WebDriverWait wait;
     private final By CHECKOUT_BUTTON = By.id("checkout");
     private final By USERNAME_CHECKOUT_FIELD = By.id("first-name");
     private final By PASSWORD_CHECKOUT_FIELD = By.id("last-name");
@@ -20,32 +24,47 @@ public class CheckpoutPage extends BasePage {
         super(driver);
     }
 
+    @Override
+    public BasePage isPageOpened() {
+        wait.until(ExpectedConditions.visibilityOfElementLocated(CHECKOUT_BUTTON));
+        return this;
+    }
+
+    @Step("Нажать на кнопку checkout")
     public void clickCheckoutButton() {
         driver.findElement(CHECKOUT_BUTTON).click();
     }
 
+    @Step("Нажать на кнопку finish")
     public void clickFinishButton() {
         driver.findElement(FINISH_BUTTON).click();
     }
 
+
+    @Step("Выполнить чекаут пользователя:{user} с паролем {pass} и почтовым кодом {postal} ")
     public void checkoutUser(String user, String pass, String postal) {
         driver.findElement(USERNAME_CHECKOUT_FIELD).sendKeys(user);
         driver.findElement(PASSWORD_CHECKOUT_FIELD).sendKeys(pass);
         driver.findElement(POSTAL_CHECKOUT_FIELD).sendKeys(postal);
         driver.findElement(CONTINUE_BUTTON).click();
-   }
-   public void clickShoppingCartIcon() {
-        driver.findElement(SHOPPING_CART_ICON).click();
-   }
+    }
 
+    @Step("Нажать на иконку корзины")
+    public void clickShoppingCartIcon() {
+        driver.findElement(SHOPPING_CART_ICON).click();
+    }
+
+    @Step("Получить сообщение об ошибке")
     public String getErrorMessage() {
         return driver.findElement(ERROR_MESSAGE).getText();
     }
 
+    @Step("Получить заголовок")
     public String getTitle() {
         return driver.findElement(TITLE).getText();
     }
 
+    @Step("Получить успешное сообщение")
     public String getSuccessfulMessage() {
         return driver.findElement(FINAL_SUCCESSFULL_MESSAGE).getText();
     }

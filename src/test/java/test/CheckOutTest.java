@@ -1,14 +1,20 @@
 package test;
 
+import io.qameta.allure.*;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
 
-public class CheckOutTest extends BaseTest{
+public class CheckOutTest extends BaseTest {
 
     @Test(description = "Проверка чекаута с пустым именем",
             testName = "Негативные креды",
             groups = "regress")
+    @Owner("Anna")
+    @Epic("Sauce Demo 3")
+    @Feature("Checkout Page")
+    @Story("Checkout With Empty Username")
+    @Severity(SeverityLevel.CRITICAL)
     public void checkCheckoutWithEmptyUsername() {
         SoftAssert softAssert = new SoftAssert();
         loginPage.open();
@@ -26,6 +32,11 @@ public class CheckOutTest extends BaseTest{
     @Test(description = "Проверка чекаута с пустым паролем",
             testName = "Негативные креды",
             groups = "regress")
+    @Owner("Anna")
+    @Epic("Sauce Demo 3")
+    @Feature("Checkout Page")
+    @Story("Checkout With Empty Password")
+    @Severity(SeverityLevel.CRITICAL)
     public void checkCheckoutWithEmptyPassword() {
         SoftAssert softAssert = new SoftAssert();
         loginPage.open();
@@ -43,6 +54,11 @@ public class CheckOutTest extends BaseTest{
     @Test(description = "Проверка чекаута с пустым почтовым кодом",
             testName = "Негативные креды",
             groups = "regress")
+    @Owner("Anna")
+    @Epic("Sauce Demo 3")
+    @Feature("Checkout Page")
+    @Story("Checkout With Empty Postal")
+    @Severity(SeverityLevel.CRITICAL)
     public void checkCheckoutWithEmptyPostal() {
         SoftAssert softAssert = new SoftAssert();
         loginPage.open();
@@ -60,6 +76,11 @@ public class CheckOutTest extends BaseTest{
     @Test(description = "Проверка чекаута с валидными данными",
             testName = "Позитивные креды",
             groups = "smoke")
+    @Owner("Anna")
+    @Epic("Sauce Demo 3")
+    @Feature("Checkout Page")
+    @Story("Checkout With positive creds")
+    @Severity(SeverityLevel.BLOCKER)
     public void checkCheckoutWithPositiveCreds() {
         SoftAssert softAssert = new SoftAssert();
         loginPage.open();
