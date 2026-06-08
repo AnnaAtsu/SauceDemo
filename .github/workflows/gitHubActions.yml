@@ -1,4 +1,4 @@
-name: SauceDemo CI
+name:  SauceDemo CI
 
 on:
   push:
