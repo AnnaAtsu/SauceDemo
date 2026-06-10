@@ -1,1 +1,0 @@
-[{"uid":"903c2b429d2310e7","name":"Проверка логина с позитивными кредами","time":{"start":1781099187875,"stop":1781099188375,"duration":500},"status":"passed","severity":"blocker"},{"uid":"b828af14896bf6ff","name":"End to end тест для совершения покупки","time":{"start":1781099185059,"stop":1781099187424,"duration":2365},"status":"passed","severity":"blocker"}]
