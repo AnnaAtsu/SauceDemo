@@ -49,7 +49,9 @@ public class BaseTest {
             options.addArguments("--disable-notifications");
             options.addArguments("--disable-popup-blocking");
             options.addArguments("--disable-infobars");
-            options.addArguments("--headless"); //режим без граф.части браузера
+            if(System.getPropert("headless", "true")).equals("true") {
+                options.addArguments("--headless"); //режим без граф.части браузера
+            }
             options.addArguments("--no-sandbox");
             options.addArguments("--disable-dev-shm-usage");
             options.addArguments("--disable-gpu");
@@ -58,7 +60,9 @@ public class BaseTest {
             driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         } else if (browser.equalsIgnoreCase("firefox")) {
             EdgeOptions options = new EdgeOptions();
-            options.addArguments("--headless");
+            if(System.getPropert("headless", "true")).equals("true") {
+                options.addArguments("--headless"); //режим без граф.части браузера
+            }
             driver = new EdgeDriver(options);
             options.addArguments("--no-sandbox");
             options.addArguments("--disable-dev-shm-usage");
