@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="daec01de-5359-4354-a77f-406143cfe414" name="Changes" comment="added allure">
+      <change beforePath="$PROJECT_DIR$/src/test/java/test/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/test/BaseTest.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="gh-pages" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="SWAP_SIDES_IN_COMPARE_BRANCHES" value="true" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;AnnaAtsu&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/AnnaAtsu/SauceDemo.git&quot;,
+    &quot;accountId&quot;: &quot;d22df9c9-9be2-42d4-87da-a5bd7df5e467&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="3DGondWXWwjpCyEnl8pO8RBnmVi" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Maven.SauceDemo [allure:report].executor": "Run",
+    "Maven.SauceDemo [allure:serve].executor": "Run",
+    "Maven.SauceDemo [clean,-Dtest=LoginTest,test].executor": "Run",
+    "Maven.SauceDemo [clean,test].executor": "Run",
+    "Maven.SauceDemo [clean...].executor": "Run",
+    "Maven.SauceDemo [clean].executor": "Run",
+    "Maven.SauceDemo [io.qameta.allure:allure-maven:2.12.0:install].executor": "Run",
+    "Maven.SauceDemo [io.qameta.allure:allure-maven:2.12.0:report].executor": "Run",
+    "Maven.SauceDemo [io.qameta.allure:allure-maven:2.12.0:serve].executor": "Run",
+    "Maven.SauceDemo [test].executor": "Run",
+    "Maven.SauceDemo [versions:display-dependency-updates].executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "TestNG./Users/anna/IdeaProjects/SauceDemo/src/test/resources/CrossBrowser.xml.executor": "Run",
+    "TestNG./Users/anna/IdeaProjects/SauceDemo/src/test/resources/forretry.xml.executor": "Run",
+    "TestNG./Users/anna/IdeaProjects/SauceDemo/src/test/resources/resgression.xml.executor": "Run",
+    "TestNG./Users/anna/IdeaProjects/SauceDemo/src/test/resources/smoke.xml.executor": "Run",
+    "TestNG./Users/anna/IdeaProjects/SauceDemo/src/test/resources/testng.xml.executor": "Run",
+    "TestNG.AddToCartTest.checkCart.executor": "Run",
+    "TestNG.AddToCartTest.checkCartItem (1).executor": "Run",
+    "TestNG.AddToCartTest.checkCartItem.executor": "Run",
+    "TestNG.AddToCartTest.executor": "Run",
+    "TestNG.CheckOutTest.checkCheckoutWithEmptyPassword.executor": "Run",
+    "TestNG.CheckOutTest.checkCheckoutWithEmptyPostal.executor": "Run",
+    "TestNG.CheckOutTest.checkCheckoutWithEmptyUsername.executor": "Run",
+    "TestNG.CheckOutTest.checkCheckoutWithPositiveCreds.executor": "Run",
+    "TestNG.CheckoutOverviewTest.testCheckoutOverviewWithOneProduct.executor": "Run",
+    "TestNG.CompletePurchaseTest.buyProductTest.executor": "Run",
+    "TestNG.LocatorsTest.checkLocators.executor": "Run",
+    "TestNG.LoginTest.checkLoginWithEmptyPassworWithloginData.executor": "Run",
+    "TestNG.LoginTest.checkLoginWithEmptyPassword.executor": "Run",
+    "TestNG.LoginTest.checkLoginWithEmptyPasword.executor": "Run",
+    "TestNG.LoginTest.checkLoginWithEmptyUsername.executor": "Run",
+    "TestNG.LoginTest.checkLoginWithNegativeCreds.executor": "Run",
+    "TestNG.LoginTest.checkLoginWithPositiveCred.executor": "Run",
+    "TestNG.LoginTest.checkLoginWithPositiveCreds.executor": "Run",
+    "TestNG.LoginTest.checkLoginWithPosotiveCreds.executor": "Run",
+    "TestNG.LoginTest.executor": "Run",
+    "TestNG.ProductsTest.checkAddButton.executor": "Run",
+    "TestNG.ProductsTest.checkAddButtonChangeToRemove.executor": "Run",
+    "TestNG.ProductsTest.checkAllAddButtonsChangeToRemove.executor": "Run",
+    "TestNG.ProductsTest.checkAllItemsOnPage.executor": "Run",
+    "TestNG.test.executor": "Run",
+    "ToolWindow.Run.ShowToolbar": "false",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/anna/IdeaProjects/SauceDemo/src/main/java",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java" />
+      <recent name="$PROJECT_DIR$/src/test/resources" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/src/test/resources" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="test" />
+    </key>
+  </component>
+  <component name="RunManager" selected="TestNG.LoginTest.checkLoginWithEmptyUsername">
+    <configuration name="SauceDemo [clean...]" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="cmdOptions" />
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="clean" />
+                <option value="-DsuiteXmlFile=src/test/resources/smoke.xml" />
+                <option value="test" />
+              </list>
+            </option>
+            <option name="multimoduleDir" />
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="projectsCmdOptionValues">
+              <list />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <configuration name="AddToCartTest.checkCartItem (1)" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="SauceDemo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.AddToCartTest" />
+      <option name="METHOD_NAME" value="checkCartItem" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LoginTest.checkLoginWithEmptyPasword" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="SauceDemo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.LoginTest" />
+      <option name="METHOD_NAME" value="checkLoginWithEmptyPasword" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LoginTest.checkLoginWithEmptyUsername" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="SauceDemo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.LoginTest" />
+      <option name="METHOD_NAME" value="checkLoginWithEmptyUsername" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LoginTest.checkLoginWithPositiveCreds" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="SauceDemo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.LoginTest" />
+      <option name="METHOD_NAME" value="checkLoginWithPositiveCreds" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LoginTest.checkLoginWithPosotiveCreds" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="SauceDemo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.LoginTest" />
+      <option name="METHOD_NAME" value="checkLoginWithPosotiveCreds" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Maven.SauceDemo [clean...]" />
+      <item itemvalue="TestNG.AddToCartTest.checkCartItem (1)" />
+      <item itemvalue="TestNG.LoginTest.checkLoginWithEmptyPasword" />
+      <item itemvalue="TestNG.LoginTest.checkLoginWithEmptyUsername" />
+      <item itemvalue="TestNG.LoginTest.checkLoginWithPosotiveCreds" />
+      <item itemvalue="TestNG.LoginTest.checkLoginWithPositiveCreds" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="TestNG.LoginTest.checkLoginWithPositiveCreds" />
+        <item itemvalue="TestNG.LoginTest.checkLoginWithPosotiveCreds" />
+        <item itemvalue="TestNG.LoginTest.checkLoginWithEmptyUsername" />
+        <item itemvalue="TestNG.LoginTest.checkLoginWithEmptyPasword" />
+        <item itemvalue="TestNG.AddToCartTest.checkCartItem (1)" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-2fc7cc6b9a17-intellij.indexing.shared.core-IU-253.31033.145" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="daec01de-5359-4354-a77f-406143cfe414" name="Changes" comment="" />
+      <created>1777917940241</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1777917940241</updated>
+    </task>
+    <task id="LOCAL-00001" summary="домашняя работа по теме Locators">
+      <option name="closed" value="true" />
+      <created>1778052162024</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1778052162024</updated>
+    </task>
+    <task id="LOCAL-00002" summary="add branch">
+      <option name="closed" value="true" />
+      <created>1778692152817</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1778692152817</updated>
+    </task>
+    <task id="LOCAL-00003" summary="добавлена домашка по теме Page Object">
+      <option name="closed" value="true" />
+      <created>1778941040489</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1778941040489</updated>
+    </task>
+    <task id="LOCAL-00004" summary="добавлено testng">
+      <option name="closed" value="true" />
+      <created>1779010201694</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1779010201695</updated>
+    </task>
+    <task id="LOCAL-00005" summary="добавлен маван и аллюр репорт, сделала разметка">
+      <option name="closed" value="true" />
+      <created>1779530453344</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1779530453344</updated>
+    </task>
+    <task id="LOCAL-00006" summary="домашка 13 для проекта sausedemo - loadable + invocation">
+      <option name="closed" value="true" />
+      <created>1780243479358</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1780243479358</updated>
+    </task>
+    <task id="LOCAL-00007" summary="added headless">
+      <option name="closed" value="true" />
+      <created>1780508812815</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1780508812815</updated>
+    </task>
+    <task id="LOCAL-00008" summary="added headless2">
+      <option name="closed" value="true" />
+      <created>1780509155938</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1780509155938</updated>
+    </task>
+    <task id="LOCAL-00009" summary="workflow_dispatch">
+      <option name="closed" value="true" />
+      <created>1780512109015</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1780512109015</updated>
+    </task>
+    <task id="LOCAL-00010" summary="added user credentials">
+      <option name="closed" value="true" />
+      <created>1780512853056</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1780512853056</updated>
+    </task>
+    <task id="LOCAL-00011" summary="отредактировала файлы">
+      <option name="closed" value="true" />
+      <created>1780575570044</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1780575570044</updated>
+    </task>
+    <task id="LOCAL-00012" summary="added gh-pages">
+      <option name="closed" value="true" />
+      <created>1780935472613</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1780935472613</updated>
+    </task>
+    <task id="LOCAL-00013" summary="added gh-pages">
+      <option name="closed" value="true" />
+      <created>1780936566235</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1780936566235</updated>
+    </task>
+    <task id="LOCAL-00014" summary="added allure">
+      <option name="closed" value="true" />
+      <created>1780936701917</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1780936701918</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="домашняя работа по теме Locators" />
+    <MESSAGE value="add branch" />
+    <MESSAGE value="добавлена домашка по теме Page Object" />
+    <MESSAGE value="добавлено testng" />
+    <MESSAGE value="добавлен маван и аллюр репорт, сделала разметка" />
+    <MESSAGE value="домашка 13 для проекта sausedemo - loadable + invocation" />
+    <MESSAGE value="added headless" />
+    <MESSAGE value="added headless2" />
+    <MESSAGE value="workflow_dispatch" />
+    <MESSAGE value="added user credentials" />
+    <MESSAGE value="отредактировала файлы" />
+    <MESSAGE value="added gh-pages" />
+    <MESSAGE value="added allure" />
+    <option name="LAST_COMMIT_MESSAGE" value="added allure" />
+  </component>
+</project>
