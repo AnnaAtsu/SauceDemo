@@ -1,3 +1,0 @@
-"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
-"","1422","End to end тест для совершения покупки","saucedemo","2026-06-10","passed","2026-06-10","test.CompletePurchaseTest","Smoke","test.CompletePurchaseTest","buyProductTest"
-"Проверка логина с позитивными кредами","522","Проверка логина с позитивными кредами","saucedemo","2026-06-10","passed","2026-06-10","test.LoginTest","Smoke","test.LoginTest","checkLoginWithPositiveCreds"
