@@ -30,8 +30,7 @@ public class LoginTest extends BaseTest {
     public void checkLoginWithPositiveCreds() {
         SoftAssert softAssert = new SoftAssert();
         loginPage.open();
-        loginPage.login("standard_user", "2secret_sauce");
-        Assert.fail("Тест упал намеренно для проверки Allure");
+        loginPage.login("standard_user", password);
         String actualTitle = "Products";
         String expectedTitle = driver.getTitle();
         softAssert.assertNotEquals(actualTitle, expectedTitle, "Very bad");

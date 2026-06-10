@@ -13,7 +13,6 @@ public class AddToCartTest extends BaseTest {
 
     String expectedNameItem = "Sauce Labs Backpack";
     String expectedPriceItem = "$29.99";
-
     @Test(description = "Проверка добавления товара в корзину",
             testName = "Проверка товара в корзине",
             groups = "smoke")
