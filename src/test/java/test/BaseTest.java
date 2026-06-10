@@ -50,6 +50,9 @@ public class BaseTest {
             options.addArguments("--disable-popup-blocking");
             options.addArguments("--disable-infobars");
             options.addArguments("--headless"); //режим без граф.части браузера
+            options.addArguments("--no-sandbox");
+            options.addArguments("--disable-dev-shm-usage");
+            options.addArguments("--disable-gpu");
             driver = new ChromeDriver(options);
             driver.manage().window().maximize();
             driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
@@ -57,6 +60,9 @@ public class BaseTest {
             EdgeOptions options = new EdgeOptions();
             options.addArguments("--headless");
             driver = new EdgeDriver(options);
+            options.addArguments("--no-sandbox");
+            options.addArguments("--disable-dev-shm-usage");
+            options.addArguments("--disable-gpu");
         }
         iTestContext.setAttribute("driver", driver);
         loginPage = new LoginPage(driver);
